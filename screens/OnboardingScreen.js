@@ -3,12 +3,12 @@ import { ImageBackground, Image, StyleSheet, Text, View, TouchableOpacity, SafeA
 
 function OnboardingScreen ({navigation}){
     function NavigationHandler () {
-        navigation.navigate('Home')
+        navigation.navigate('Main-App')
     }
         return(
                 <SafeAreaView style={styles.container}>
                 <ImageBackground
-                source={require('../assets/images/savings-Bg.png')}
+                source={require('../assets/images/savings-Bg-circular.png')}
                 style={styles.bg}
                 resizeMode="cover"
                 >

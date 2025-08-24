@@ -1,14 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {useFonts} from 'expo-font'
-import SplashScreen from './screens/SplashScreen';
-import OnboardingScreen from './screens/OnboardingScreen'
-import HomeScreen from './screens/HomeScreen';
+import StackNavigator from './navigation/StackNavigator';
 
 
-const Stack = createNativeStackNavigator()
+
+
 
  function App() {
 
@@ -22,11 +20,7 @@ const Stack = createNativeStackNavigator()
     <>
       <StatusBar style='default'/>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='splash'>
-          <Stack.Screen name='splash' component={SplashScreen} options={{headerShown:false}}/>
-          <Stack.Screen name='Onboarding' component={OnboardingScreen} options={{headerShown:false}}/>
-            <Stack.Screen name='Home' component={HomeScreen} options={{headerShown:false}}/>
-        </Stack.Navigator>
+       <StackNavigator/>
       </NavigationContainer>
     </>
   );
